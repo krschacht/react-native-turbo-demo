@@ -383,7 +383,7 @@ PODS:
     - React-Core
     - RNTurboiOS (= 7.0.0-beta.1)
   - RNTurboiOS (7.0.0-beta.1)
-  - SocketRocket (0.6.0)
+  - SocketRocket (0.6.1)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -602,10 +602,10 @@ SPEC CHECKSUMS:
   RNScreens: 34cc502acf1b916c582c60003dc3089fa01dc66d
   RNTurbo: 26bac3c0ab088899cceb9a1e03692d5246e3fce2
   RNTurboiOS: 22091eb5d7be50050c694443a32a34b3069dd229
-  SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
+  SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: 445485143df46a9d5d4ef61cbbc629fec40fb9a0
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
 PODFILE CHECKSUM: 85b06d0ed137749e786ec852f3aa1ff84759e876
 
-COCOAPODS: 1.13.0
+COCOAPODS: 1.14.3

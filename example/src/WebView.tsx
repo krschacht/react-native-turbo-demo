@@ -9,6 +9,7 @@ import {
 import { useCurrentUrl, useWebviewNavigate } from 'react-native-web-screen';
 import { Routes } from './webScreenRoutes';
 import Form from './Strada/Form';
+import type {RefObject} from 'packages/turbo/src/VisitableView'
 
 export type Props = {
   navigation: any;
@@ -18,7 +19,7 @@ export type Props = {
 const sessionHandle = 'TurboWebviewExample';
 const stradaComponents = [Form];
 
-const WebView: React.FC<Props> = ({ baseURL, navigation, ...props }) => {
+const WebView = React.forwardRef<RefObject, React.PropsWithRef<Props>>(({ baseURL, navigation, ...props }, ref) => {
   const navigateTo = useWebviewNavigate();
 
   const currentUrl = useCurrentUrl(baseURL);
@@ -41,6 +42,7 @@ const WebView: React.FC<Props> = ({ baseURL, navigation, ...props }) => {
   return (
     <VisitableView
       {...props}
+      ref={ref}
       sessionHandle={sessionHandle}
       url={currentUrl}
       applicationNameForUserAgent="Turbo Native"
@@ -50,6 +52,6 @@ const WebView: React.FC<Props> = ({ baseURL, navigation, ...props }) => {
       onVisitError={onVisitError}
     />
   );
-};
+});
 
 export default WebView;
